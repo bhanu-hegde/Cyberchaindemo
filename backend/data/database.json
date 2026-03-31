@@ -1,0 +1,985 @@
+{
+  "schemaVersion": 1,
+  "systemMode": "blockchain",
+  "recovery": {
+    "status": "secured",
+    "lastRecoveryAt": "11:47:18 pm"
+  },
+  "users": [
+    {
+      "id": "u-admin",
+      "name": "System Admin",
+      "email": "admin@cyberchain.app",
+      "role": "admin",
+      "balance": 450000,
+      "riskScore": "low",
+      "passwordSalt": "06e18ade7add801b95d1f3410e2f7af7",
+      "passwordHash": "68c4adcc2c754d117aacfba7e371b98d4fbb4a34d61964b8e5006603df91b7c25a7c76fa29c695a0f6cf32fe1ad094723fcec52ab9b538797f874b04efa91129"
+    },
+    {
+      "id": "u-1001",
+      "name": "Aarav Sharma",
+      "email": "aarav@cyberchain.app",
+      "role": "user",
+      "balance": 2850,
+      "riskScore": "medium",
+      "passwordSalt": "9489a582db222b17f4f6b98d1cf0d03c",
+      "passwordHash": "44b09a956ca55e75150c597ef6a702135c0dba4e9eca5be180166c9e46658c6463e2b9b22c68f7c9871ff2e58af595ee377c4d0ae571df71c7a18ca4080d9701"
+    },
+    {
+      "id": "u-1002",
+      "name": "Diya Verma",
+      "email": "diya@cyberchain.app",
+      "role": "user",
+      "balance": 3725,
+      "riskScore": "low",
+      "passwordSalt": "4f4efbcb7ac6d8363056ce8e1c59c582",
+      "passwordHash": "abed3e2af4cb3e9999e8d87c42241c769e790ec4b29790d665b3bf6840c85072a034df58898768d06278121d97623bcdf364ebf80776d8b71dcdbd11e424fddf"
+    },
+    {
+      "id": "u-1003",
+      "name": "Kabir Singh",
+      "email": "kabir@cyberchain.app",
+      "role": "user",
+      "balance": 2326,
+      "riskScore": "medium",
+      "passwordSalt": "3f17e89e880051a73d58e043c17c05b0",
+      "passwordHash": "ed112e973d88a053187bd2b2a2071c533d580bbeda7d1646789b2216206ba00ea330a30142734a4ac63dbab4673dbd4df5e0e1927c837dddd8ff05b4102b3ea7"
+    },
+    {
+      "id": "u-1004",
+      "name": "Meera Iyer",
+      "email": "meera@cyberchain.app",
+      "role": "user",
+      "balance": 4210,
+      "riskScore": "low",
+      "passwordSalt": "109cc6ff79c0cd5c4450aa7416e993f2",
+      "passwordHash": "b780704caefa519ee0a82eb938e86bddadd767042f69f7dfc15f0e46e6f74682310678296d586ab870c29d6a60fb8a4c4fba63bed8c9f2e3122aeea96ba7efb8"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "tx-1774894545211-da8f",
+      "fromUserId": "u-admin",
+      "toUserId": "u-1003",
+      "from": "System Admin",
+      "to": "Kabir Singh",
+      "amount": 46,
+      "status": "duplicate rejected by consensus",
+      "timestamp": "11:45:45 pm",
+      "integrity": "clean",
+      "route": "admin reserve -> consensus mempool -> chained ledger",
+      "note": "Consensus reconciliation restored canonical transaction values.",
+      "flags": [
+        "admin-credit",
+        "on-chain",
+        "mitm",
+        "intercepted",
+        "reconciled",
+        "tampered",
+        "double-spend"
+      ],
+      "immutableHash": "0xef30fdc5fe67"
+    },
+    {
+      "id": "tx-1774892622430-7070",
+      "fromUserId": "u-admin",
+      "toUserId": "u-1003",
+      "from": "System Admin",
+      "to": "Kabir Singh",
+      "amount": 46,
+      "status": "reconciled by blockchain consensus",
+      "timestamp": "11:13:42 pm",
+      "integrity": "clean",
+      "route": "admin reserve -> consensus mempool -> chained ledger",
+      "note": "Consensus reconciliation restored canonical transaction values.",
+      "flags": [
+        "admin-credit",
+        "on-chain",
+        "mitm",
+        "intercepted",
+        "reconciled",
+        "tampered"
+      ],
+      "immutableHash": "0xef30fdc5fe67"
+    },
+    {
+      "id": "tx-1774892604712-98de",
+      "fromUserId": "u-admin",
+      "toUserId": "u-1003",
+      "from": "System Admin",
+      "to": "Kabir Singh",
+      "amount": 300,
+      "status": "reconciled by blockchain consensus",
+      "timestamp": "11:13:24 pm",
+      "integrity": "clean",
+      "route": "admin reserve -> consensus mempool -> chained ledger",
+      "note": "Consensus reconciliation restored canonical transaction values.",
+      "flags": [
+        "admin-credit",
+        "on-chain",
+        "tampered",
+        "reconciled"
+      ],
+      "immutableHash": "0xa5c20bd41123"
+    },
+    {
+      "id": "tx-1774889939053-1c66",
+      "fromUserId": "u-admin",
+      "toUserId": "u-1001",
+      "from": "System Admin",
+      "to": "Aarav Sharma",
+      "amount": 200,
+      "status": "reconciled by blockchain consensus",
+      "timestamp": "10:28:59 pm",
+      "integrity": "clean",
+      "route": "admin reserve -> payment gateway -> central ledger",
+      "note": "Consensus reconciliation restored canonical transaction values.",
+      "flags": [
+        "admin-credit",
+        "mitm",
+        "intercepted",
+        "reconciled"
+      ],
+      "immutableHash": "0x342d7d13c7e5"
+    },
+    {
+      "id": "tx-1774889931373-95cf",
+      "fromUserId": "u-admin",
+      "toUserId": "u-1001",
+      "from": "System Admin",
+      "to": "Aarav Sharma",
+      "amount": 200,
+      "status": "treasury credit",
+      "timestamp": "10:28:51 pm",
+      "integrity": "clean",
+      "route": "admin reserve -> payment gateway -> central ledger",
+      "note": "Treasury reserve credited to customer wallet.",
+      "flags": [
+        "admin-credit"
+      ],
+      "immutableHash": "0xb8c315388800"
+    },
+    {
+      "id": "tx-1101",
+      "fromUserId": "u-admin",
+      "toUserId": "u-1001",
+      "from": "System Admin",
+      "to": "Aarav Sharma",
+      "amount": 1200,
+      "status": "settled",
+      "timestamp": "09:10:12 AM",
+      "integrity": "clean",
+      "route": "admin reserve -> payment gateway -> central ledger",
+      "note": "Treasury allocation moved to end-user wallet.",
+      "flags": [
+        "reserve-allocation"
+      ],
+      "immutableHash": "0xe0c21868705c"
+    },
+    {
+      "id": "tx-1102",
+      "fromUserId": "u-1001",
+      "toUserId": "u-1002",
+      "from": "Aarav Sharma",
+      "to": "Diya Verma",
+      "amount": 150,
+      "status": "settled",
+      "timestamp": "09:24:48 AM",
+      "integrity": "clean",
+      "route": "wallet -> payment gateway -> central ledger",
+      "note": "Peer payment approved by centralized verifier.",
+      "flags": [
+        "verified"
+      ],
+      "immutableHash": "0x5e5c36f7e983"
+    },
+    {
+      "id": "tx-1103",
+      "fromUserId": "u-1002",
+      "toUserId": "u-1003",
+      "from": "Diya Verma",
+      "to": "Kabir Singh",
+      "amount": 210,
+      "status": "settled",
+      "timestamp": "10:05:03 AM",
+      "integrity": "clean",
+      "route": "wallet -> payment gateway -> central ledger",
+      "note": "Routine transfer across customer wallets.",
+      "flags": [
+        "verified"
+      ],
+      "immutableHash": "0xf424d2d13241"
+    },
+    {
+      "id": "tx-1104",
+      "fromUserId": "u-1003",
+      "toUserId": "u-1004",
+      "from": "Kabir Singh",
+      "to": "Meera Iyer",
+      "amount": 90,
+      "status": "settled",
+      "timestamp": "10:18:29 AM",
+      "integrity": "clean",
+      "route": "wallet -> payment gateway -> central ledger",
+      "note": "Small-value transfer settled through centralized processing.",
+      "flags": [
+        "verified"
+      ],
+      "immutableHash": "0xd51cb51abf60"
+    }
+  ],
+  "logs": [
+    {
+      "id": "log-1774894638009-a103",
+      "timestamp": "11:47:18 pm",
+      "tone": "success",
+      "message": "Blockchain recovery workflow completed; ledger integrity restored."
+    },
+    {
+      "id": "log-1774894626825-5154",
+      "timestamp": "11:47:06 pm",
+      "tone": "danger",
+      "message": "MITM interception changed transfer amount before ledger persistence."
+    },
+    {
+      "id": "log-1774894622473-d744",
+      "timestamp": "11:47:02 pm",
+      "tone": "info",
+      "message": "Centralized processing mode enabled for transaction settlement."
+    },
+    {
+      "id": "log-1774894612558-eb40",
+      "timestamp": "11:46:52 pm",
+      "tone": "warning",
+      "message": "Attack attempt (tampering) was blocked by blockchain consensus controls."
+    },
+    {
+      "id": "log-1774894595759-75e2",
+      "timestamp": "11:46:35 pm",
+      "tone": "success",
+      "message": "Blockchain recovery workflow completed; ledger integrity restored."
+    },
+    {
+      "id": "log-1774894587962-0e51",
+      "timestamp": "11:46:27 pm",
+      "tone": "danger",
+      "message": "Block Block 7 was manually edited; integrity check failed."
+    },
+    {
+      "id": "log-1774894550517-a037",
+      "timestamp": "11:45:50 pm",
+      "tone": "success",
+      "message": "Blockchain recovery workflow completed; ledger integrity restored."
+    },
+    {
+      "id": "log-1774894547871-1339",
+      "timestamp": "11:45:47 pm",
+      "tone": "info",
+      "message": "Blockchain consensus mode enabled for transaction settlement."
+    },
+    {
+      "id": "log-1774894545238-e79e",
+      "timestamp": "11:45:45 pm",
+      "tone": "danger",
+      "message": "Double-spending attempt inserted a duplicate transfer record."
+    },
+    {
+      "id": "log-1774894542567-b77c",
+      "timestamp": "11:45:42 pm",
+      "tone": "info",
+      "message": "Centralized processing mode enabled for transaction settlement."
+    },
+    {
+      "id": "log-1774894533873-d3b0",
+      "timestamp": "11:45:33 pm",
+      "tone": "success",
+      "message": "Blockchain recovery workflow completed; ledger integrity restored."
+    },
+    {
+      "id": "log-1774894531173-6000",
+      "timestamp": "11:45:31 pm",
+      "tone": "info",
+      "message": "Blockchain consensus mode enabled for transaction settlement."
+    },
+    {
+      "id": "log-1774894528484-4159",
+      "timestamp": "11:45:28 pm",
+      "tone": "danger",
+      "message": "Data tampering altered stored transaction history entries."
+    },
+    {
+      "id": "log-1774894525792-fca3",
+      "timestamp": "11:45:25 pm",
+      "tone": "info",
+      "message": "Centralized processing mode enabled for transaction settlement."
+    },
+    {
+      "id": "log-1774894515695-befb",
+      "timestamp": "11:45:15 pm",
+      "tone": "success",
+      "message": "Blockchain recovery workflow completed; ledger integrity restored."
+    },
+    {
+      "id": "log-1774894512906-f5d9",
+      "timestamp": "11:45:12 pm",
+      "tone": "info",
+      "message": "Blockchain consensus mode enabled for transaction settlement."
+    },
+    {
+      "id": "log-1774894510253-e1d9",
+      "timestamp": "11:45:10 pm",
+      "tone": "danger",
+      "message": "MITM interception changed transfer amount before ledger persistence."
+    },
+    {
+      "id": "log-1774894507613-6896",
+      "timestamp": "11:45:07 pm",
+      "tone": "info",
+      "message": "Centralized processing mode enabled for transaction settlement."
+    },
+    {
+      "id": "log-1774893680954-e9ac",
+      "timestamp": "11:31:20 pm",
+      "tone": "success",
+      "message": "Blockchain recovery workflow completed; ledger integrity restored."
+    },
+    {
+      "id": "log-1774893680332-a49b",
+      "timestamp": "11:31:20 pm",
+      "tone": "info",
+      "message": "Blockchain consensus mode enabled for transaction settlement."
+    },
+    {
+      "id": "log-1774893679685-7edc",
+      "timestamp": "11:31:19 pm",
+      "tone": "danger",
+      "message": "Data tampering altered stored transaction history entries."
+    },
+    {
+      "id": "log-1774893678974-a7e0",
+      "timestamp": "11:31:18 pm",
+      "tone": "info",
+      "message": "Centralized processing mode enabled for transaction settlement."
+    },
+    {
+      "id": "log-1774893651243-588d",
+      "timestamp": "11:30:51 pm",
+      "tone": "success",
+      "message": "Blockchain recovery workflow completed; ledger integrity restored."
+    },
+    {
+      "id": "log-1774893650602-6870",
+      "timestamp": "11:30:50 pm",
+      "tone": "info",
+      "message": "Blockchain consensus mode enabled for transaction settlement."
+    },
+    {
+      "id": "log-1774893649943-a1c2",
+      "timestamp": "11:30:49 pm",
+      "tone": "danger",
+      "message": "MITM interception changed transfer amount before ledger persistence."
+    },
+    {
+      "id": "log-1774893649335-3ca0",
+      "timestamp": "11:30:49 pm",
+      "tone": "info",
+      "message": "Centralized processing mode enabled for transaction settlement."
+    },
+    {
+      "id": "log-1774892933043-d4a8",
+      "timestamp": "11:18:53 pm",
+      "tone": "success",
+      "message": "Blockchain recovery workflow completed; ledger integrity restored."
+    },
+    {
+      "id": "log-1774892932504-236f",
+      "timestamp": "11:18:52 pm",
+      "tone": "info",
+      "message": "Blockchain consensus mode enabled for transaction settlement."
+    },
+    {
+      "id": "log-1774892931850-ec4c",
+      "timestamp": "11:18:51 pm",
+      "tone": "danger",
+      "message": "MITM interception changed transfer amount before ledger persistence."
+    },
+    {
+      "id": "log-1774892931250-b7f0",
+      "timestamp": "11:18:51 pm",
+      "tone": "info",
+      "message": "Centralized processing mode enabled for transaction settlement."
+    },
+    {
+      "id": "log-1774892885019-5309",
+      "timestamp": "11:18:05 pm",
+      "tone": "success",
+      "message": "Blockchain recovery workflow completed; ledger integrity restored."
+    },
+    {
+      "id": "log-1774892730485-69f3",
+      "timestamp": "11:15:30 pm",
+      "tone": "danger",
+      "message": "Block Block 4 was manually edited; integrity check failed."
+    }
+  ],
+  "attackState": {
+    "type": null,
+    "level": "stable",
+    "title": "Ledger secured by blockchain consensus",
+    "message": "Canonical values restored and chain integrity re-established.",
+    "impacts": [
+      "Compromised transfers reconciled",
+      "Chain linkage rebuilt and verified",
+      "Consensus mode enabled for future transfers"
+    ]
+  },
+  "attackEvidence": [
+    {
+      "id": "evidence-1774894638010-3f63",
+      "attackType": "recovery",
+      "summary": "Blockchain reconciliation restored canonical ledger state",
+      "timestamp": "11:47:18 pm",
+      "rows": [
+        {
+          "key": "recovery_status",
+          "before": "required",
+          "after": "secured",
+          "changed": true
+        },
+        {
+          "key": "system_mode",
+          "before": "centralized",
+          "after": "blockchain",
+          "changed": true
+        }
+      ]
+    },
+    {
+      "id": "evidence-1774894626825-1786",
+      "attackType": "mitm",
+      "summary": "MITM changed transaction amount in transit",
+      "timestamp": "11:47:06 pm",
+      "rows": [
+        {
+          "key": "amount",
+          "before": "46",
+          "after": "65",
+          "changed": true
+        },
+        {
+          "key": "status",
+          "before": "settled",
+          "after": "intercepted in transit",
+          "changed": true
+        },
+        {
+          "key": "integrity",
+          "before": "clean",
+          "after": "compromised",
+          "changed": true
+        }
+      ]
+    },
+    {
+      "id": "evidence-1774894612561-8535",
+      "attackType": "tampering-blocked",
+      "summary": "Consensus validation blocked mutation before ledger write.",
+      "timestamp": "11:46:52 pm",
+      "rows": [
+        {
+          "key": "system_mode",
+          "before": "blockchain",
+          "after": "blockchain",
+          "changed": false
+        },
+        {
+          "key": "ledger_mutation",
+          "before": "blocked",
+          "after": "blocked",
+          "changed": false
+        },
+        {
+          "key": "reference_tx",
+          "before": "tx-1774894545211-da8f",
+          "after": "tx-1774894545211-da8f",
+          "changed": false
+        }
+      ]
+    },
+    {
+      "id": "evidence-1774894595759-7dd3",
+      "attackType": "recovery",
+      "summary": "Blockchain reconciliation restored canonical ledger state",
+      "timestamp": "11:46:35 pm",
+      "rows": [
+        {
+          "key": "recovery_status",
+          "before": "required",
+          "after": "secured",
+          "changed": true
+        },
+        {
+          "key": "system_mode",
+          "before": "centralized",
+          "after": "blockchain",
+          "changed": true
+        }
+      ]
+    },
+    {
+      "id": "evidence-1774894587962-b9ff",
+      "attackType": "manual-edit",
+      "summary": "Manual mutation applied to Block 7 without consensus.",
+      "timestamp": "11:46:27 pm",
+      "rows": [
+        {
+          "key": "Block 7 data",
+          "before": "Aarav Sharma -> Diya Verma | 150 | settled",
+          "after": "Aarav Sharma -> Diya Verma | 650 | settled",
+          "changed": true
+        },
+        {
+          "key": "Block 7 hash",
+          "before": "0x6727415dfc2e",
+          "after": "0x31ee8588a15a",
+          "changed": true
+        },
+        {
+          "key": "chain_valid",
+          "before": "true",
+          "after": "false",
+          "changed": true
+        }
+      ]
+    },
+    {
+      "id": "evidence-1774894550519-516e",
+      "attackType": "recovery",
+      "summary": "Blockchain reconciliation restored canonical ledger state",
+      "timestamp": "11:45:50 pm",
+      "rows": [
+        {
+          "key": "recovery_status",
+          "before": "required",
+          "after": "secured",
+          "changed": true
+        },
+        {
+          "key": "system_mode",
+          "before": "centralized",
+          "after": "blockchain",
+          "changed": true
+        }
+      ]
+    },
+    {
+      "id": "evidence-1774894545239-971c",
+      "attackType": "double",
+      "summary": "Duplicate spend intent entered the queue",
+      "timestamp": "11:45:45 pm",
+      "rows": [
+        {
+          "key": "queue_count",
+          "before": "8",
+          "after": "9",
+          "changed": true
+        },
+        {
+          "key": "duplicate_status",
+          "before": "none",
+          "after": "duplicate pending reconciliation",
+          "changed": true
+        }
+      ]
+    },
+    {
+      "id": "evidence-1774894533874-0397",
+      "attackType": "recovery",
+      "summary": "Blockchain reconciliation restored canonical ledger state",
+      "timestamp": "11:45:33 pm",
+      "rows": [
+        {
+          "key": "recovery_status",
+          "before": "required",
+          "after": "secured",
+          "changed": true
+        },
+        {
+          "key": "system_mode",
+          "before": "centralized",
+          "after": "blockchain",
+          "changed": true
+        }
+      ]
+    },
+    {
+      "id": "evidence-1774894528486-3ea8",
+      "attackType": "tampering",
+      "summary": "Stored ledger values were modified post-settlement",
+      "timestamp": "11:45:28 pm",
+      "rows": [
+        {
+          "key": "tx-1774892622430-7070 amount",
+          "before": "46",
+          "after": "166",
+          "changed": true
+        },
+        {
+          "key": "tx-1774892604712-98de amount",
+          "before": "300",
+          "after": "540",
+          "changed": true
+        }
+      ]
+    },
+    {
+      "id": "evidence-1774894515696-250c",
+      "attackType": "recovery",
+      "summary": "Blockchain reconciliation restored canonical ledger state",
+      "timestamp": "11:45:15 pm",
+      "rows": [
+        {
+          "key": "recovery_status",
+          "before": "required",
+          "after": "secured",
+          "changed": true
+        },
+        {
+          "key": "system_mode",
+          "before": "centralized",
+          "after": "blockchain",
+          "changed": true
+        }
+      ]
+    },
+    {
+      "id": "evidence-1774894510254-7d02",
+      "attackType": "mitm",
+      "summary": "MITM changed transaction amount in transit",
+      "timestamp": "11:45:10 pm",
+      "rows": [
+        {
+          "key": "amount",
+          "before": "46",
+          "after": "65",
+          "changed": true
+        },
+        {
+          "key": "status",
+          "before": "settled",
+          "after": "intercepted in transit",
+          "changed": true
+        },
+        {
+          "key": "integrity",
+          "before": "clean",
+          "after": "compromised",
+          "changed": true
+        }
+      ]
+    },
+    {
+      "id": "evidence-1774893680955-0751",
+      "attackType": "recovery",
+      "summary": "Blockchain reconciliation restored canonical ledger state",
+      "timestamp": "11:31:20 pm",
+      "rows": [
+        {
+          "key": "recovery_status",
+          "before": "required",
+          "after": "secured",
+          "changed": true
+        },
+        {
+          "key": "system_mode",
+          "before": "centralized",
+          "after": "blockchain",
+          "changed": true
+        }
+      ]
+    },
+    {
+      "id": "evidence-1774893679701-d339",
+      "attackType": "tampering",
+      "summary": "Stored ledger values were modified post-settlement",
+      "timestamp": "11:31:19 pm",
+      "rows": [
+        {
+          "key": "tx-1774892622430-7070 amount",
+          "before": "46",
+          "after": "166",
+          "changed": true
+        },
+        {
+          "key": "tx-1774892604712-98de amount",
+          "before": "300",
+          "after": "540",
+          "changed": true
+        }
+      ]
+    },
+    {
+      "id": "evidence-1774893651244-5a70",
+      "attackType": "recovery",
+      "summary": "Blockchain reconciliation restored canonical ledger state",
+      "timestamp": "11:30:51 pm",
+      "rows": [
+        {
+          "key": "recovery_status",
+          "before": "required",
+          "after": "secured",
+          "changed": true
+        },
+        {
+          "key": "system_mode",
+          "before": "centralized",
+          "after": "blockchain",
+          "changed": true
+        }
+      ]
+    },
+    {
+      "id": "evidence-1774893649945-74cb",
+      "attackType": "mitm",
+      "summary": "MITM changed transaction amount in transit",
+      "timestamp": "11:30:49 pm",
+      "rows": [
+        {
+          "key": "amount",
+          "before": "46",
+          "after": "65",
+          "changed": true
+        },
+        {
+          "key": "status",
+          "before": "settled",
+          "after": "intercepted in transit",
+          "changed": true
+        },
+        {
+          "key": "integrity",
+          "before": "clean",
+          "after": "compromised",
+          "changed": true
+        }
+      ]
+    },
+    {
+      "id": "evidence-1774892933043-fd62",
+      "attackType": "recovery",
+      "summary": "Blockchain reconciliation restored canonical ledger state",
+      "timestamp": "11:18:53 pm",
+      "rows": [
+        {
+          "key": "recovery_status",
+          "before": "required",
+          "after": "secured",
+          "changed": true
+        },
+        {
+          "key": "system_mode",
+          "before": "centralized",
+          "after": "blockchain",
+          "changed": true
+        }
+      ]
+    },
+    {
+      "id": "evidence-1774892931853-47f9",
+      "attackType": "mitm",
+      "summary": "MITM changed transaction amount in transit",
+      "timestamp": "11:18:51 pm",
+      "rows": [
+        {
+          "key": "amount",
+          "before": "46",
+          "after": "65",
+          "changed": true
+        },
+        {
+          "key": "status",
+          "before": "settled",
+          "after": "intercepted in transit",
+          "changed": true
+        },
+        {
+          "key": "integrity",
+          "before": "clean",
+          "after": "compromised",
+          "changed": true
+        }
+      ]
+    },
+    {
+      "id": "evidence-1774892885020-69a0",
+      "attackType": "recovery",
+      "summary": "Blockchain reconciliation restored canonical ledger state",
+      "timestamp": "11:18:05 pm",
+      "rows": [
+        {
+          "key": "recovery_status",
+          "before": "required",
+          "after": "secured",
+          "changed": true
+        },
+        {
+          "key": "system_mode",
+          "before": "centralized",
+          "after": "blockchain",
+          "changed": true
+        }
+      ]
+    },
+    {
+      "id": "evidence-1774892730523-6ca6",
+      "attackType": "manual-edit",
+      "summary": "Manual mutation applied to Block 4 without consensus.",
+      "timestamp": "11:15:30 pm",
+      "rows": [
+        {
+          "key": "Block 4 data",
+          "before": "System Admin -> Aarav Sharma | 200 | treasury credit",
+          "after": "System Admin -> Aarav Sharma |700 | treasury credit",
+          "changed": true
+        },
+        {
+          "key": "Block 4 hash",
+          "before": "0xe9e03688277e",
+          "after": "0x376e62dc431c",
+          "changed": true
+        },
+        {
+          "key": "chain_valid",
+          "before": "true",
+          "after": "false",
+          "changed": true
+        }
+      ]
+    },
+    {
+      "id": "evidence-1774890163259-0c8c",
+      "attackType": "manual-edit",
+      "summary": "Manual mutation applied to Block 5 without consensus.",
+      "timestamp": "10:32:43 pm",
+      "rows": [
+        {
+          "key": "Block 5 data",
+          "before": "Diya Verma -> Kabir Singh | 210 | settled",
+          "after": "Diya Verma -> Kabir Singh | 400 | settled",
+          "changed": true
+        },
+        {
+          "key": "Block 5 hash",
+          "before": "0xbf14b342fe5b",
+          "after": "0xd25a9a0f97de",
+          "changed": true
+        },
+        {
+          "key": "chain_valid",
+          "before": "true",
+          "after": "false",
+          "changed": true
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "id": "block-1",
+      "label": "Block 1",
+      "transactionId": "tx-1774894545211-da8f",
+      "data": "System Admin -> Kabir Singh | 46 | duplicate rejected by consensus",
+      "previousHash": "GENESIS",
+      "hash": "0x652f613fe5d4",
+      "edited": false,
+      "attackVector": null,
+      "threatSignal": false,
+      "consensusLayer": "active"
+    },
+    {
+      "id": "block-2",
+      "label": "Block 2",
+      "transactionId": "tx-1774892622430-7070",
+      "data": "System Admin -> Kabir Singh | 46 | reconciled by blockchain consensus",
+      "previousHash": "0x652f613fe5d4",
+      "hash": "0x8deab3b71574",
+      "edited": false,
+      "attackVector": null,
+      "threatSignal": false,
+      "consensusLayer": "active"
+    },
+    {
+      "id": "block-3",
+      "label": "Block 3",
+      "transactionId": "tx-1774892604712-98de",
+      "data": "System Admin -> Kabir Singh | 300 | reconciled by blockchain consensus",
+      "previousHash": "0x8deab3b71574",
+      "hash": "0x7b5efa950915",
+      "edited": false,
+      "attackVector": null,
+      "threatSignal": false,
+      "consensusLayer": "active"
+    },
+    {
+      "id": "block-4",
+      "label": "Block 4",
+      "transactionId": "tx-1774889939053-1c66",
+      "data": "System Admin -> Aarav Sharma | 200 | reconciled by blockchain consensus",
+      "previousHash": "0x7b5efa950915",
+      "hash": "0x7cdc0d1a828d",
+      "edited": false,
+      "attackVector": null,
+      "threatSignal": false,
+      "consensusLayer": "active"
+    },
+    {
+      "id": "block-5",
+      "label": "Block 5",
+      "transactionId": "tx-1774889931373-95cf",
+      "data": "System Admin -> Aarav Sharma | 200 | treasury credit",
+      "previousHash": "0x7cdc0d1a828d",
+      "hash": "0xf197be5956ab",
+      "edited": false,
+      "attackVector": null,
+      "threatSignal": false,
+      "consensusLayer": "active"
+    },
+    {
+      "id": "block-6",
+      "label": "Block 6",
+      "transactionId": "tx-1101",
+      "data": "System Admin -> Aarav Sharma | 1200 | settled",
+      "previousHash": "0xf197be5956ab",
+      "hash": "0x7febaefd134b",
+      "edited": false,
+      "attackVector": null,
+      "threatSignal": false,
+      "consensusLayer": "active"
+    },
+    {
+      "id": "block-7",
+      "label": "Block 7",
+      "transactionId": "tx-1102",
+      "data": "Aarav Sharma -> Diya Verma | 150 | settled",
+      "previousHash": "0x7febaefd134b",
+      "hash": "0x6727415dfc2e",
+      "edited": false,
+      "attackVector": null,
+      "threatSignal": false,
+      "consensusLayer": "active"
+    },
+    {
+      "id": "block-8",
+      "label": "Block 8",
+      "transactionId": "tx-1103",
+      "data": "Diya Verma -> Kabir Singh | 210 | settled",
+      "previousHash": "0x6727415dfc2e",
+      "hash": "0x5a843203f33b",
+      "edited": false,
+      "attackVector": null,
+      "threatSignal": false,
+      "consensusLayer": "active"
+    }
+  ]
+}
