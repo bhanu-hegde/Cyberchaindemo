@@ -212,6 +212,20 @@ export function AppProvider({ children }) {
   const recoverBlockchain = useCallback(async (method = 'pbft') => {
     if (!token) return false;
 
+    // Trigger visual healing state immediately so the 3D scene pulsates green
+    setAppState((current) => ({
+      ...current,
+      recoveryStatus: 'in_progress',
+      flowModel: {
+        ...(current.flowModel || {}),
+        phase: 'RECOVERY_IN_PROGRESS',
+        phaseDescription: `Executing ${method.toUpperCase()} Blockchain Recovery Algorithm...`
+      }
+    }));
+
+    // Artificially wait 3 seconds for the user to visually experience the green healing animation!
+    await new Promise(resolve => setTimeout(resolve, 3000));
+
     const outcome = await runWithLoading(async () => {
       const response = await api.recoverBlockchain(token, method);
       applyState(response.state);
