@@ -7,6 +7,31 @@ This application is a high-fidelity, interactive **Threat Operations Center** an
 
 ---
 
+## 🚀 Getting Started (How to Run)
+
+To run this simulation environment locally on your machine, you need to start both the Frontend UI and the Backend logging server.
+
+1. **Install Dependencies**
+   Open your terminal in the project root (`d:\cyberchain`) and install all required packages:
+   ```bash
+   npm install
+   ```
+
+2. **Start the Backend Server**
+   In your terminal, start the Express backend which serves the database logs:
+   ```bash
+   npm run server
+   ```
+
+3. **Start the Frontend UI**
+   Open a *second* terminal window in the project root, and launch the React/Vite application:
+   ```bash
+   npm run dev
+   ```
+   Open the Localhost URL provided in the terminal (usually `http://localhost:5173`) in your browser to start the simulation!
+
+---
+
 ## ⚡ 1. The Threat Operations Center
 
 The centralized dashboard is designed for triggering orchestrated scenarios and visualizing catastrophic data alterations.
