@@ -139,6 +139,12 @@
   ],
   "logs": [
     {
+      "id": "log-1774954261095-850a",
+      "timestamp": "04:21:01 pm",
+      "tone": "warning",
+      "message": "Attack attempt (tampering) was blocked by blockchain consensus controls."
+    },
+    {
       "id": "log-1774953022285-764c",
       "timestamp": "04:00:22 pm",
       "tone": "warning",
@@ -323,26 +329,46 @@
       "timestamp": "11:45:47 pm",
       "tone": "info",
       "message": "Blockchain consensus mode enabled for transaction settlement."
-    },
-    {
-      "id": "log-1774894545238-e79e",
-      "timestamp": "11:45:45 pm",
-      "tone": "danger",
-      "message": "Double-spending attempt inserted a duplicate transfer record."
     }
   ],
   "attackState": {
-    "type": null,
-    "level": "stable",
-    "title": "System state rolled back",
-    "message": "Corrupted blocks and associated transactions were dropped to preserve integrity.",
+    "type": "tampering",
+    "level": "warning",
+    "title": "Attack attempt detected and blocked",
+    "message": "Consensus verification rejected malicious mutation before ledger compromise.",
     "impacts": [
-      "Corrupted blocks permanently deleted",
-      "Unverified transactions dropped from ledger",
-      "Consensus mode enabled for future transfers"
+      "Threat telemetry captured and block flagged",
+      "Ledger values remained canonical",
+      "Blockchain consensus prevented silent corruption"
     ]
   },
   "attackEvidence": [
+    {
+      "id": "evidence-1774954261117-cda7",
+      "attackType": "tampering-blocked",
+      "summary": "Consensus validation blocked mutation before ledger write.",
+      "timestamp": "04:21:01 pm",
+      "rows": [
+        {
+          "key": "system_mode",
+          "before": "blockchain",
+          "after": "blockchain",
+          "changed": false
+        },
+        {
+          "key": "ledger_mutation",
+          "before": "blocked",
+          "after": "blocked",
+          "changed": false
+        },
+        {
+          "key": "reference_tx",
+          "before": "tx-1774953014387-3df1",
+          "after": "tx-1774953014387-3df1",
+          "changed": false
+        }
+      ]
+    },
     {
       "id": "evidence-1774953014406-d4fd",
       "attackType": "double",
@@ -776,26 +802,6 @@
           "changed": true
         }
       ]
-    },
-    {
-      "id": "evidence-1774894533874-0397",
-      "attackType": "recovery",
-      "summary": "Blockchain reconciliation restored canonical ledger state",
-      "timestamp": "11:45:33 pm",
-      "rows": [
-        {
-          "key": "recovery_status",
-          "before": "required",
-          "after": "secured",
-          "changed": true
-        },
-        {
-          "key": "system_mode",
-          "before": "centralized",
-          "after": "blockchain",
-          "changed": true
-        }
-      ]
     }
   ],
   "blocks": [
@@ -831,8 +837,8 @@
       "previousHash": "0x14be0882ce7c",
       "hash": "0xdba74d335039",
       "edited": false,
-      "attackVector": null,
-      "threatSignal": false,
+      "attackVector": "tampering",
+      "threatSignal": true,
       "consensusLayer": "inactive"
     }
   ]

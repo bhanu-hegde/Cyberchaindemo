@@ -67,3 +67,8 @@ Instead of abstracting the security, users physically calculate block trust manu
 - **Ledger Data String:** A raw string injection representing who sent what (e.g., `System Admin -> Aarav Sharma | 1200 | settled`).
 - **Cryptographic Engine:** Typing a single new character immediately mutates the live SHA-256 hash beneath it dynamically.
 - **Asynchronous Mining Loop:** Once the data is hacked and the hash "shatters", users click **Mine**. A non-blocking asynchronous `while-loop` engine fires up, rapidly generating random `Nonce` variables until the hash meets the exact Difficulty Target (e.g. `000`). It visually flashes through computations like authentic mining rigs!
+
+### Interactive Sandbox Integration
+The sandbox is wired directly into the live Threat Center backend to demonstrate cause and effect:
+- **Button 1 (Execute Mining Algorithm):** Teaches the difficulty of hacking the blockchain. It runs the local Proof-of-Work loop in your browser to mathematically secure a corrupted string without altering the global database.
+- **Button 2 (Inject Data Drift -> Threat Center):** Teaches the consequence of an unsecured hack. If you tamper with the data and click this, it intercepts your navigation, breaks the actual backend database server, and throws you into the Threat Center so you can physically watch the 3D network topology fall apart in real-time.
