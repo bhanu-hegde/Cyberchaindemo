@@ -2,9 +2,11 @@ import { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import GlassCard from '../components/GlassCard';
 import MotionButton from '../components/MotionButton';
+import { useAppContext } from '../context/AppContext';
 
 function BlockchainSimulationPage() {
   const navigate = useNavigate();
+  const { runAttack } = useAppContext();
   
   const defaultData = "System Admin -> Aarav Sharma | 1200 | settled";
   const [data, setData] = useState(defaultData);
@@ -158,10 +160,15 @@ function BlockchainSimulationPage() {
             )}
             
             <MotionButton
-                onClick={() => navigate('/attacks')}
-                className="whitespace-nowrap py-4 px-6 rounded-xl border border-white/10 bg-white/5 text-slate-200 hover:bg-white/10 font-bold tracking-widest uppercase text-sm"
+                onClick={async () => {
+                  if (data !== defaultData) {
+                    await runAttack('tampering');
+                  }
+                  navigate('/attacks');
+                }}
+                className={`whitespace-nowrap py-4 px-6 rounded-xl border border-white/10 font-bold tracking-widest uppercase text-sm shadow-[0_0_15px_rgba(244,63,94,0.3)] hover:bg-white/10 ${data !== defaultData ? 'bg-rose-500/20 text-rose-200 animate-pulse border-rose-500/40' : 'bg-white/5 text-slate-200'}`}
               >
-                Threat Center
+                {data !== defaultData ? 'Inject Data Drift -> Threat Center' : 'Threat Center'}
             </MotionButton>
           </div>
         </GlassCard>
